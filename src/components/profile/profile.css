@@ -1,0 +1,35 @@
+*{
+ margin: 0;
+}
+.user-profile{
+    width: 25%;
+    /* height: 50%; */
+    display: flex;
+    border: 2px solid black;
+    margin: auto;
+    margin-top: 12px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+}
+label{
+    color: black;
+    margin: auto;
+    padding: 8px;
+
+}
+p{
+    margin: auto;
+    padding-bottom: 5px;
+}
+.user-info{
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid black; */
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+img{
+    margin: auto;
+    border: 1px solid black;
+}

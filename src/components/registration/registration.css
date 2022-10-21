@@ -1,0 +1,96 @@
+.login{
+    min-height: 100vh;
+    min-width: 100vw;
+    overflow-x: hidden;
+    background: linear-gradient(to left, cyan, transparent)
+}
+.login-container{
+    height: 75vh;
+    width: 70%;
+    background: linear-gradient(to right bottom, rgba(236, 236, 236, 0.7), rgba(236, 236, 236, 0.3));
+    border-radius: 1rem;
+    margin: 2rem auto;
+    box-shadow: 0.5rem 0.5rem 2rem -1rem white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.left-side, .right-side{
+    margin: 2rem 2rem;
+    box-shadow: 0.5rem 0.5rem 2rem -1rem white;
+    height: 80%;
+    width: 100%;
+}
+.left-side{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+input{
+    display: block;
+    border: none;
+    height: 2rem;
+    width: 50%;
+    margin: auto;
+    margin-bottom: 1.5rem;
+    transition: all 0.1s ease-in-out;
+
+}
+input:hover{
+    box-shadow: 4px 3px 9px -1px rgb(4, 243, 243);
+    outline:  0.5px rgb(4, 243, 243);
+
+    
+}
+.left-side label{
+    display: block;
+    margin: auto;
+    width: 70%;
+    font-size: small;
+    color: grey;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+.btn{
+    width: 80%;
+    background:  rgb(4, 243, 243);
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.btn:hover{
+    box-shadow: 4px 3px 9px -1px gray;
+    transform: translateY(-5px);
+}
+.img-class{
+    height: 4rem;
+    display: block;
+    margin: auto;
+    margin-bottom: 10px;
+}
+#img-id{
+    height: 100%;
+    object-fit: cover;
+}
+.right-image{
+    height: 50%;
+    width: 70%;
+}
+#img{
+    width: 100%;
+    object-fit: cover;
+}
+link{
+    background: rgb(4, 243, 243);
+}
+.left-side h2{
+    text-align: center;
+    color: black;
+    margin: 2px;
+    padding: 8px;
+}
+.footer{
+    margin: auto;
+    padding: 10px;
+}

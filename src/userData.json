@@ -1,0 +1,32 @@
+{
+  "users": [
+    {
+      "name": "ac",
+      "email": "aaaa.com",
+      "phone": "123456789",
+      "password": "1234567",
+      "id": 1
+    },
+    {
+      "name": "asd",
+      "email": "asd",
+      "phone": "12345678",
+      "password": "",
+      "id": 2
+    },
+    {
+      "name": "anurag",
+      "email": "anurag04@gmail.com",
+      "phone": "1234567890",
+      "password": "anurag123",
+      "id": 3
+    },
+    {
+      "name": "sharma",
+      "email": "sharma123@gmail.com",
+      "phone": "9876543210",
+      "password": "anurag4321",
+      "id": 4
+    }
+  ]
+}

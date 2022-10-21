@@ -1,0 +1,31 @@
+.expense-list{
+    width: 55%;
+}
+.content-box{
+    /* background-color: #61616117; */
+    padding: 12px;
+    margin: 2px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 2px;
+    border-bottom: 2px solid #61616117;
+}
+.right-list{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+.des{
+    display: flex;
+    flex: 1;
+}
+.list-amount{
+    font-size: 20px;
+    font-weight: 500;
+}
+.delete-icon{
+    font-size: 16px;
+    cursor: pointer;
+}

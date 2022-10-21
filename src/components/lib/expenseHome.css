@@ -1,0 +1,111 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px;
+    width: 60%;
+}
+.container1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px;
+    width: 30%;
+}
+.span{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.addTransaction {
+    width: 25%;
+    background: black;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border-radius: 4px;
+}
+
+.addTransaction:hover {
+    box-shadow: 4px 3px 9px -1px gray;
+    transform: translateY(-5px);
+}
+.box{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    margin: 15px;
+    width: 100%;
+}
+.box input{
+    border: 1px solid black;
+    margin: 10px;
+    display: flex;
+    width: auto;
+    border-radius: 5px;
+}
+.box input :hover{
+    box-shadow: 4px 3px 9px -1px rgb(96, 94, 94);
+    outline:  0.5px rgb(96, 94, 94);
+}
+::placeholder{
+    color: black;
+    
+}
+.radiobtn{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    
+}
+.radiobtn label{
+    color: black;
+}
+.box button{
+    background: black;
+    border-radius: 5px;
+    color: white;
+    padding: 10px;
+    margin: 10px;
+    cursor: pointer;
+}
+.userdashboard{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.userProfile{
+    width: 30%;
+    display: flex;
+    margin: auto;
+    margin-left: 20px;
+}
+.list{
+    margin: 18px;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.profile{
+    width: 100%;
+    margin-top: 70px;
+    border: 1px solid black;
+    font-size: 20px;
+    font-weight: 500
+}
+.user {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5px;
+    width: 25%;
+}
