@@ -2,7 +2,9 @@ import React, { useContext, useState } from 'react'
 import { Link } from 'react-router-dom'
 import './header.css'
 import { UserContext } from '../../App'
-import { FaBars, FaTimes, FaCog } from "react-icons/fa";
+import { FaBars, FaTimes } from "react-icons/fa";
+import { cookies } from '../cookies'
+
 
 
 const Header = () => {
@@ -27,16 +29,11 @@ const Header = () => {
                     </li>
                     <li
                         className='nav-item'
-                        // onClick={() => setClick(false)}
-
-                        onClick={()=> dispatch({ type: 'user_login', payload: {login:false} })}
+                        onClick={() => dispatch({ type: 'user_login', payload: { login: false } }) && cookies.remove("data")}
                     >
-                        {/* <i><FaCog/></i> */}
                         <Link className='link' to='/' >Logout</Link>
                     </li>
-
                 </ul>
-
             </nav>
 
 
@@ -77,7 +74,6 @@ const Header = () => {
                         </span>
                     </div>
                 </div>
-
             </div>
         )
     }

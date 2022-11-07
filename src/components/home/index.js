@@ -1,34 +1,37 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext, useState } from 'react'
 import './home.css'
 import { Link, useNavigate } from 'react-router-dom'
-import { addUsers, getUsers } from '../registration/api'
+import { getUsers } from '../registration/api'
 import { UserContext } from '../../App'
+import { cookies } from '../cookies'
 
 const HomePage = () => {
-
-    const {user, dispatch} = useContext(UserContext);
+    const { dispatch } = useContext(UserContext);
 
     const [userData, setUserData] = useState({
         email: "",
         password: ""
     })
-  
+
     const navigate = useNavigate()
     const loginUser = async (e) => {
         e.preventDefault()
         const users = await getUsers();
 
         const userExists = users.some(data => data.email === userData.email && data.password === userData.password)
-        if (userExists ) {
-         const data = users.filter(data => data.email === userData.email && data.password === userData.password)
-            // const data = {
-            //     login: true
-            // }
+        if (userExists) {
+            const data = users.filter(data => data.email === userData.email && data.password === userData.password)
+            let d = new Date()
+            d.setTime(d.getTime() + (20 * 60 * 1000));
 
-// debugger;
-            dispatch({type:'user_login', payload:{login:true, user:data[0]}})
+            cookies.set('data', data, { expires: d })
+            console.log(cookies.get('data'))
 
-                navigate('/expense')
+            dispatch({ type: 'user_login', payload: { login: true, user: data[0] } })
+
+            navigate('/expense')
+
+
 
         }
         else {

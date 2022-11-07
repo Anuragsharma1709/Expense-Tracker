@@ -12,7 +12,8 @@ export const UserContext = createContext();
 
 function App() {
   const [user, dispatch] = useReducer(reducer, initialState)
-  console.log(user)
+  window.localStorage.setItem("loginInfo", JSON.stringify(user.login))
+
   return (
     <>
       <UserContext.Provider value={{ user, dispatch }}>
@@ -22,13 +23,10 @@ function App() {
             <Route path='/' element={<HomePage />} />
             <Route path='/register' element={<Register />} />
             <Route path='/expense' element={!user.login ? <Navigate replace to="/" /> : <ExpenseHome />} />
-            <Route path='/profile' element={ user.login ? <UserProfile />: <Navigate replace to = '/'/>} />
-            
+            <Route path='/profile' element={user.login ? <UserProfile /> : <Navigate replace to='/' />} />
           </Routes>
         </BrowserRouter>
       </UserContext.Provider>
-      {/* <UserProfile /> */}
-
     </>
   );
 }

@@ -1,15 +1,46 @@
 .expense-list{
-    width: 55%;
+    width: 75%;
+    display: flex;
+    justify-content: center;
+    box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.7),
+    10px 10px 10px rgba(0, 0, 0, 0.2),
+    inset 8px 8px 15px rgba(255, 255, 255, 0.7),
+    inset 10px 10px 10px rgba(0, 0, 0, 0.2);
+    /* height: 75px ; */
+    flex-direction: column;
+    border-radius: 10px;
 }
 .content-box{
     /* background-color: #61616117; */
     padding: 12px;
-    margin: 2px 0px;
+    /* margin: 15px 0px; */
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
     border-radius: 2px;
     border-bottom: 2px solid #61616117;
+    width: 75%;
+    border-radius: 15px;
+    box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.7),
+    10px 10px 10px rgba(0, 0, 0, 0.2),
+    inset 8px 8px 15px rgba(255, 255, 255, 0.7),
+    inset 10px 10px 10px rgba(0, 0, 0, 0.2);
+}
+.trans-heading{
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+    padding: 20px 0 0 0;
+
+}
+.no-trans{
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    margin-bottom: 5px;
 }
 .right-list{
     display: flex;
@@ -28,4 +59,10 @@
 .delete-icon{
     font-size: 16px;
     cursor: pointer;
+}
+.download-btn{
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+    margin: auto;
 }

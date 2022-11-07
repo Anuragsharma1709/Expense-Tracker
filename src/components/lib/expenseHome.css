@@ -1,18 +1,29 @@
+.main-box {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+
+}
+
 .container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 50px;
-    width: 60%;
+    margin: auto;
+    width: 70%;
+    margin-top: 60px;
 }
-.container1{
+
+.container1 {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 50px;
     width: 30%;
+
 }
-.span{
+
+.span {
     width: 100%;
     display: flex;
     align-items: center;
@@ -33,39 +44,51 @@
     box-shadow: 4px 3px 9px -1px gray;
     transform: translateY(-5px);
 }
-.box{
+
+.box {
     display: flex;
     flex-direction: column;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     margin: 15px;
     width: 100%;
+    background-color: #fff;
+
+    box-shadow: var(--box-shadow);
+
+
 }
-.box input{
+
+.box input {
     border: 1px solid black;
     margin: 10px;
     display: flex;
     width: auto;
     border-radius: 5px;
 }
-.box input :hover{
+
+.box input :hover {
     box-shadow: 4px 3px 9px -1px rgb(96, 94, 94);
-    outline:  0.5px rgb(96, 94, 94);
+    outline: 0.5px rgb(96, 94, 94);
 }
-::placeholder{
+
+::placeholder {
     color: black;
-    
+
 }
-.radiobtn{
+
+.radiobtn {
     display: flex;
     flex-direction: row;
     width: 100%;
     align-items: center;
-    
+
 }
-.radiobtn label{
+
+.radiobtn label {
     color: black;
 }
-.box button{
+
+.box button {
     background: black;
     border-radius: 5px;
     color: white;
@@ -73,18 +96,29 @@
     margin: 10px;
     cursor: pointer;
 }
-.userdashboard{
+
+.userdashboard {
     display: flex;
-    flex-direction: row;
-    width: 100%;
+    /* flex-direction: row; */
+    width: 50%;
+    background: #f7f7f7;
+    ;
+    height: 67%;
+    border: 2px solid black;
+    margin: auto;
+    margin-top: 20px;
+
+
 }
-.userProfile{
+
+.userProfile {
     width: 30%;
     display: flex;
     margin: auto;
     margin-left: 20px;
 }
-.list{
+
+.list {
     margin: 18px;
     height: 2rem;
     display: flex;
@@ -95,17 +129,172 @@
     transition: all 0.2s ease;
 }
 
-.profile{
+.profile {
     width: 100%;
     margin-top: 70px;
     border: 1px solid black;
     font-size: 20px;
     font-weight: 500
 }
+
 .user {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 5px;
     width: 25%;
+}
+
+.inc-exp-container {
+    background-color: #fff;
+    box-shadow: var(--box-shadow);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.inc-exp-container>div {
+    flex: 1;
+    text-align: center;
+}
+
+.inc-exp-container>div:first-of-type {
+    border-right: 1px solid #dedede;
+}
+
+.money.inc {
+    color: #2ecc71;
+    margin-top: 8px;
+}
+
+.money.exp {
+    color: #c0392b;
+    margin-top: 8px;
+
+}
+
+h4 {
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.modal-btn {
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* position: relative; */
+    width: 100%;
+
+}
+
+.icon-button {
+    font-size: 2.4rem;
+    width: 4rem;
+    height: 4rem;
+    color: #fff;
+    background-color: #ffd54f;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 5rem;
+    right: 5rem;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    align-items: center;
+}
+
+.modal-class {
+    /* width: 50%; */
+}
+
+.close-btn {
+    /* display: flex;
+    justify-content: end; */
+}
+
+.heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.heading span {
+    font-size: 2rem
+}
+.switch{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.switch-holder {
+    display: flex;
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.7),
+        10px 10px 10px rgba(0, 0, 0, 0.2),
+        inset 8px 8px 15px rgba(255, 255, 255, 0.7),
+        inset 10px 10px 10px rgba(0, 0, 0, 0.2);
+    justify-content: center;
+    align-items: center;
+    width: 135px;
+    height: 67px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    flex-direction: column;
+
+
+}
+
+.inc-button {
+    box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.7),
+        10px 10px 10px rgba(0, 0, 0, 0.2),
+        inset 8px 8px 15px rgba(255, 255, 255, 0.7),
+        inset 10px 10px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    background: white;
+    font-size: 20px;
+    height: 36px;
+    width: inherit;
+    color: green;
+    border: 1px solid green;
+}
+.exp-button {
+    box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.7),
+        10px 10px 10px rgba(0, 0, 0, 0.2),
+        inset 8px 8px 15px rgba(255, 255, 255, 0.7),
+        inset 10px 10px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    background: white;
+    font-size: 20px;
+    height: 36px;
+    width: inherit;
+    color: red;
+    border: 1px solid red;
+}
+.bal-button {
+    box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.7),
+        10px 10px 10px rgba(0, 0, 0, 0.2),
+        inset 8px 8px 15px rgba(255, 255, 255, 0.7),
+        inset 10px 10px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    background: white;
+    font-size: 20px;
+    height: 36px;
+    width: inherit;
+    color: lawngreen;
+    border: 1px solid green;
+}
+.modal-box{
+    width: 50%;
+    display: flex;
+    border: 2px solid black;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 135px;
 }

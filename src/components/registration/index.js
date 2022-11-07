@@ -35,16 +35,16 @@ const Register = () => {
     const saveUserData = async (e) => {
         e.preventDefault();
         console.log(userData)
-        
+
         const users = await getUsers()
         console.log(users)
-        
+
         const fieldsValidated = validateField();
         if (!fieldsValidated?.success) {
             const emailExists = users.some(x => x.email === userData.email)
-            if (!emailExists){
-                 addUsers(userData)
-                 alert("resgistered successfully")
+            if (!emailExists) {
+                addUsers(userData)
+                alert("resgistered successfully")
             }
             else
                 alert("Email already exists!")

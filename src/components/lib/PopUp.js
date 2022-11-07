@@ -1,10 +1,13 @@
 import React, { useState } from 'react'
-import { useDispatch } from 'react-redux'
+import { GrAdd } from "react-icons/gr";
+import Modal from 'react-modal'
 import { addExpense } from '../redux/actions/expenses'
-import Balance from './Balance'
+import { useDispatch } from 'react-redux'
+import './expenseHome.css';
 
-const AddTransaction = () => {
 
+const PopUp = () => {
+    const [show, setShow] = useState(false)
     const AddTransactionView = (props) => {
         const [amount, setAmount] = useState("")
         const [description, setDescription] = useState("")
@@ -39,7 +42,7 @@ const AddTransaction = () => {
 
             }
             dispatch(addExpense(data))
-            props.setIsAddVisible()
+            setShow(!show)
         }
 
 
@@ -66,11 +69,14 @@ const AddTransaction = () => {
                     onChange={handleDate}
 
                 />
+
+
                 <div className='radiobtn'>
                     <input
                         type='radio'
                         id='expense'
                         name='type'
+                        // value={type}
                         onClick={() => setType('expense')}
 
 
@@ -80,7 +86,10 @@ const AddTransaction = () => {
                         type='radio'
                         id='income'
                         name='type'
+                        // value={type}
                         onClick={() => setType('income')}
+
+
                     />
                     <label htmlFor='income'>Income</label>
                 </div>
@@ -91,23 +100,28 @@ const AddTransaction = () => {
         )
 
     }
-    const [isAddVisible, setIsAddVisible] = useState(false)
     return (
-        <>
-            <div className='main-box'>
-                <div className='container1'>
-                    <div className='span'>
-                        <span >Add Transaction</span>
-                        <button className='addTransaction' onClick={() => setIsAddVisible(!isAddVisible)}>
-                            {isAddVisible ? "cancel" : "Add"}
-                        </button>
+        <div>
+            <div className='modal-class'>
+                <Modal isOpen={show}
+                    ariaHideApp={false}
+                    className='modal-box'>
+                    <div className='modal-btn'>
+                        <div className='heading'>
+                            <h2>ADD INCOME<span>/</span>EXPENSE</h2>
+                        </div>
+                        <div className='close-btn'>
+                            <button onClick={() => setShow(false)}>X</button>
+                        </div>
                     </div>
-                    {isAddVisible && <AddTransactionView setIsAddVisible={setIsAddVisible} />}
-                </div>
-                <Balance />
+                    <AddTransactionView />
+                </Modal>
             </div>
-        </>
+            <div className='icon-button' onClick={() => setShow(!show)}>
+                <GrAdd />
+            </div>
+        </div>
     )
 }
 
-export default AddTransaction
+export default PopUp
