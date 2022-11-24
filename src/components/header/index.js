@@ -4,42 +4,48 @@ import './header.css'
 import { UserContext } from '../../App'
 import { FaBars, FaTimes } from "react-icons/fa";
 import { cookies } from '../cookies'
+import { useReducer } from 'react';
+import { initialState, reducer } from '../redux/reducers/loginReducer';
+import Sidebar from '../Sidebar';
 
 
 
 const Header = () => {
     const { user, dispatch } = useContext(UserContext);
+//   const [user, dispatch] = useReducer(reducer, initialState)
     const [click, setClick] = useState(false)
-    if (user.login) {
+    console.log(user.login)
+    const logout = () =>{
+        dispatch({ type: 'user_login', payload: { login: false } })
+        localStorage.clear()
 
-        return (
+    }
 
-            <nav className='navbar'>
-                <span className='nav-logo'>Expense Tracker</span>
-                <div className='nav-icon' >
-                    <i onClick={() => setClick(!click)} className='faIcon'>{click ? <FaTimes /> : <FaBars />}</i>
+    // if (user.login) {
+    //     return (
+    //         <nav className='navbar'>
+    //             <span className='nav-logo'>Expense Tracker</span>
+    //             <div className='nav-icon' >
+    //                 <i onClick={() => setClick(!click)} className='faIcon'>{click ? <FaTimes /> : <FaBars />}</i>
 
-                </div>
-                <ul className={click ? 'nav-menu active' : 'nav-menu'}>
-                    <li className='nav-item' onClick={() => setClick(false)}>
-                        <Link className='link' to='/expense'>Home</Link>
-                    </li>
-                    <li className='nav-item' onClick={() => setClick(false)}>
-                        <Link className='link' to='/profile'>profile</Link>
-                    </li>
-                    <li
-                        className='nav-item'
-                        onClick={() => dispatch({ type: 'user_login', payload: { login: false } }) && cookies.remove("data")}
-                    >
-                        <Link className='link' to='/' >Logout</Link>
-                    </li>
-                </ul>
-            </nav>
-
-
-
-        )
-    } else {
+    //             </div>
+    //             <ul className={click ? 'nav-menu active' : 'nav-menu'}>
+    //                 <li className='nav-item' onClick={() => setClick(false)}>
+    //                     <Link className='link' to='/expense'>Home</Link>
+    //                 </li>
+    //                 <li className='nav-item' onClick={() => setClick(false)}>
+    //                     <Link className='link' to='/profile'>profile</Link>
+    //                 </li>
+    //                 <li
+    //                     className='nav-item'
+    //                     onClick={logout}
+    //                 >
+    //                     <Link className='link' to='/' >Logout</Link>
+    //                 </li>
+    //             </ul>
+    //         </nav>
+    //     )
+    // } else {
         return (
             <div className='header'>
                 <span className='header_logo'>EXPENSE TRACKER</span>
@@ -76,7 +82,7 @@ const Header = () => {
                 </div>
             </div>
         )
-    }
+    // }
 
 }
 

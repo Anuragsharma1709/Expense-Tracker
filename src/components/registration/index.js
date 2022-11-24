@@ -50,7 +50,6 @@ const Register = () => {
                 alert("Email already exists!")
         } else {
             alert(fieldsValidated.message)
-
         }
     }
 
@@ -64,7 +63,7 @@ const Register = () => {
 
                         <div className='content'>
                             <label htmlFor="name">Full Name</label>
-                            <input
+                            <input className='registration_input'
                                 type="text"
                                 name="name"
                                 id="name"
@@ -77,6 +76,7 @@ const Register = () => {
                         <div className='content'>
                             <label htmlFor="email">Email</label>
                             <input
+                                className='registration_input'
                                 type="text"
                                 name="email"
                                 id="email"
@@ -90,6 +90,7 @@ const Register = () => {
                         <div className='content'>
                             <label htmlFor="phone">Phone no</label>
                             <input
+                                className='registration_input'
                                 type="number"
                                 name="phone"
                                 id="phone"
@@ -102,6 +103,7 @@ const Register = () => {
                         <div className='content'>
                             <label htmlFor="password">Password</label>
                             <input
+                                className='registration_input'
                                 type="password"
                                 name="password"
                                 id="password"

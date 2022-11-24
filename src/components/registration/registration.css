@@ -26,7 +26,7 @@
     flex-direction: column;
     justify-content: center;
 }
-input{
+.registration_input{
     display: block;
     border: none;
     height: 2rem;
@@ -36,7 +36,7 @@ input{
     transition: all 0.1s ease-in-out;
 
 }
-input:hover{
+.registration_input:hover{
     box-shadow: 4px 3px 9px -1px rgb(4, 243, 243);
     outline:  0.5px rgb(4, 243, 243);
 

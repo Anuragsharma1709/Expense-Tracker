@@ -39,15 +39,10 @@ const PopUp = () => {
                 date,
                 type,
                 createdAt: new Date()
-
             }
             dispatch(addExpense(data))
             setShow(!show)
         }
-
-
-
-
         return (
             <div className='box'>
                 <input

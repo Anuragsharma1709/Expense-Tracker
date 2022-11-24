@@ -1,10 +1,13 @@
+
+const info = JSON.parse(localStorage.getItem('loginInfo'))
+const userInfo = JSON.parse(localStorage.getItem('userInfo'))
+console.log(userInfo)
 export const initialState = {
-    login: localStorage.getItem("loginInfo"), 
-    user: null
+    login: info, 
+    user: userInfo
 }
 
 export const reducer = (state = initialState, action) => {
-    console.log(action.type)
     if (action.type === 'user_login') {
         return action.payload;
     }

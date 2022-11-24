@@ -1,0 +1,18 @@
+.charts {
+    display: flex;
+    flex-direction: row;
+    height: 45vh;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 30px;
+}
+.barChart{
+    display: flex;
+
+}
+.pieChart{
+    display: flex;
+    height: inherit;
+    align-items: center;
+
+}

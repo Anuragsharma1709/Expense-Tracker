@@ -11,27 +11,21 @@ const History = () => {
   return (
     <div className='expense-list'>
       <div className='trans-heading'>Transactions</div>
-      <div className='download-btn'>
+      {/* <div className='download-btn'>
 
         <ExportToExcel exceldata={list} fileName={fileName} />
-      </div>
+      </div> */}
       {list.length ? (
         list.map((item) =>
           <div className='content-box' key={item.createdAt}>
-
             <div className='des'>
               <h3>{item.description}</h3>
-              {/* <h4>{time}</h4> */}
+              <h5>{item.date} {time}</h5>
             </div>
-
-
-
             <div className='right-list'>
               <div>
                 <h3 className='list-amount'> ₹{item.amount} </h3>
               </div>
-
-
             </div>
           </div>
         )
